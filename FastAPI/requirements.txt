@@ -1,4 +1,12 @@
+Click==7.0
 fastapi==0.45.0
+h11==0.9.0
+httptools==0.0.13
+psycopg2-binary==2.8.4
 pydantic==1.3
 SQLAlchemy==1.3.12
 starlette==0.12.9
+typing==3.7.4.1
+uvicorn==0.11.1
+uvloop==0.14.0
+websockets==8.1
