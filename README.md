@@ -1,6 +1,4 @@
-# SmartNudges
-Smart Personalised Nudges 
+# FastAPI:Postgres:docker-compose
 
--FastAPI implementation of APIs
+-FastAPI app using PostgreSQL DB
 -Dockerfile and docker-compose integations
--Integration with PostgreSQL
