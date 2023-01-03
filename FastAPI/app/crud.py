@@ -32,3 +32,7 @@ def error_message(message):
     return {
         'error': message
     }
+
+def update_device_info(db: Session, info: schema.DeviceInfo):
+    db.query(models.DeviceInfo).filter(models.DeviceInfo.token == info.token).update({"username": (info.username)})    
+    return db.commit()
