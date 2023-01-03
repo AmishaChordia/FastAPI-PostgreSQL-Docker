@@ -34,6 +34,13 @@ def get_device_info(token: str, db=Depends(db)):
 def get_all_device_info(db=Depends(db)):
     return crud.get_device_info(db)
 
+@app.put('/device/info')
+def update_device_info(info: DeviceInfo, db=Depends(db)):
+    object_in_db = crud.get_device_info(db, info.token)
+    if not object_in_db:
+        raise HTTPException(404, detail= crud.error_message('This device not found'))
+    return crud.update_device_info(db, info)
+
 @app.post('/configuration')
 def save_configuration(config: Configuration, db=Depends(db)):
     # always maintain one config
